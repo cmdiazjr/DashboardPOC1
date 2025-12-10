@@ -114,9 +114,8 @@ Include a screenshot like the one you posted for maximum portfolio impact.
 Example placeholder:
 
 ```
-/Screenshots/dashboard_running.png
+![Dashboard Screenshot](DashboardPOC1.png)
 ```
-
 ---
 
 ## 🎯 Purpose of this Project
