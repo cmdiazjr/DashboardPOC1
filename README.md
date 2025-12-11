@@ -114,7 +114,7 @@ Include a screenshot like the one you posted for maximum portfolio impact.
 Example placeholder:
 
 ```
-![Dashboard Screenshot](DashboardPOC1.png)
+![Dashboard Screenshot](./DashboardPOC1.png)
 ```
 ---
 
