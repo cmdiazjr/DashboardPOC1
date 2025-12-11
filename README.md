@@ -20,15 +20,23 @@ This project was built as a **portfolio-ready Proof of Concept (POC)** to showca
 
 ---
 
+## 🖼 Example Screenshot
+
+Below is an example screenshot of the dashboard running locally:
+
+![Dashboard Screenshot](DashboardPOC1.png)
+
+---
+
 ## 🚀 Features
 
 ### ✔ **1. Network Latency Monitoring**
-Pings multiple external endpoints (Google DNS, Cloudflare, GitHub)  
+Pings multiple external endpoints (Google DNS, Cloudflare, GitHub).  
 Displays color-coded latency bars for:
 
-- UP (Green)  
-- DEGRADED (Yellow)  
-- DOWN (Red)
+- **UP** (Green)  
+- **DEGRADED** (Yellow)  
+- **DOWN** (Red)
 
 ---
 
@@ -39,91 +47,84 @@ Uses `psutil` to capture:
 - Memory consumption  
 - Disk utilization  
 
-Refreshes every 5 seconds.
+Refreshes automatically every 5 seconds.
 
 ---
 
 ### ✔ **3. Security Event Feed (Simulated)**
-Generges realistic rotating events such as:
+Generates rotating, realistic security events such as:
 
 - FAILED_LOGIN  
 - FIREWALL_BLOCK  
 - PORT_SCAN  
 - VPN_DISCONNECT  
 
-Used to demonstrate log ingestion and alerting concepts.
+Useful for demonstrating log ingestion, alerting concepts, and SOC-style event visibility.
 
 ---
 
 ### ✔ **4. Device Health Panel**
-Aggregates multiple signals to determine:
+Aggregates multiple signals to determine operational status for:
 
-- Router health  
-- Firewall health  
-- Switch status  
-- VPN Gateway status  
-- Cloud Provider availability  
-- Internet status  
+- Router  
+- Firewall  
+- Switch  
+- VPN Gateway  
+- Cloud Provider  
+- Internet  
 
-Color-coded for quick NOC visibility.
+Statuses are color-coded:
+
+- **Green** → UP  
+- **Yellow** → DEGRADED  
+- **Red** → DOWN  
 
 ---
 
 ## 🏗 Project Structure
 
-```
 DashboardPOC1/
 │
 ├── app.py
 ├── README.md
 │
 ├── modules/
-│   ├── latency.py
-│   ├── system_metrics.py
-│   ├── security_feed.py
-│   └── device_health.py
+│ ├── latency.py
+│ ├── system_metrics.py
+│ ├── security_feed.py
+│ └── device_health.py
 │
-└── venv/  (ignored)
-```
+├── test_latency.py
+├── test_system.py
+├── test_security.py
+├── test_health.py
+│
+└── venv/ (ignored)
+
 
 ---
 
 ## ▶️ How to Run Locally
 
-### 1. Install dependencies:
-```
+### 1. Install dependencies  
 pip install -r requirements.txt
-```
 
-### 2. Start the dashboard:
-```
-python app.py
-```
 
-### 3. Open your browser to:
-```
+### 3. Open your browser  
 http://127.0.0.1:8050/
-```
 
----
 
-## 🖼 Example Screenshot
+The dashboard will refresh automatically every 5 seconds.
 
-Include a screenshot like the one you posted for maximum portfolio impact.
-
-Example placeholder:
-
-```
-![Dashboard Screenshot](./DashboardPOC1.png)
-```
 ---
 
 ## 🎯 Purpose of this Project
 
 This dashboard was designed to:
+
 - Demonstrate real-time data handling  
 - Build a visually appealing, functional IT monitoring tool  
-- Showcase operational knowledge  
+- Showcase operational engineering knowledge  
 - Serve as a **portfolio project for job applications**  
 - Prepare for roles in:
   - Network Engineering  
@@ -131,27 +132,28 @@ This dashboard was designed to:
   - NOC/SOC  
   - Site Reliability Engineering  
   - DevOps  
-  - MSP technical roles  
+  - MSP technical support roles  
+
+---
+
+## ⭐ Future Enhancements (v2 Ideas)
+
+- Add time-series historical charts  
+- SNMP polling for real routers/switches  
+- Cloud provider API checks (AWS, Azure, GCP)  
+- Export project as a Docker container  
+- Store event logs in SQLite or Redis  
+- Add authentication  
+- Dark mode UI theme  
 
 ---
 
 ## 📬 Contact  
 **Carlos Diaz**  
 📧 cmdiazjr@gmail.com  
-🔗 linkedin.com/in/carlos-diaz-networkcloud
+🔗 linkedin.com/in/carlos-diaz-networkcloud  
 
 ---
 
-## ⭐ Future Enhancements  
-Potential improvements for v2:
+### ⭐ If you found this project helpful, please star the repository!
 
-- Add time-series history charts  
-- Add SNMP polling for real routers/switches  
-- Add cloud provider API checks (AWS, Azure)  
-- Export dashboard as Docker container  
-- Store event logs in SQLite or Redis  
-- Add authentication to the dashboard  
-
----
-
-### ⭐ If you found this project helpful or interesting, please star the repository!
